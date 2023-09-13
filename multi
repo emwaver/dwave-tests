@@ -1,0 +1,7 @@
+#!/bin/bash
+
+e_value=$1
+count=$2
+for ((i=0; i<$count; i++)); do
+    sbatch --job-name $e_value sample $e_value
+done

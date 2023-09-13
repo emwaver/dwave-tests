@@ -1,0 +1,22 @@
+#!/bin/bash
+#SBATCH -o elwe_out/%j.out
+#SBATCH -e elwe_err/%j.err
+#SBATCH -N 1
+#SBATCH -n 1
+
+module load anaconda3
+. $ANACONDA_HOME/etc/profile.d/conda.sh
+conda activate ba
+
+model=$1
+sampler=$2
+
+python -u ./sample_model.py $model $sampler
+
+## Creating
+## 20GB for 60x8x60?
+
+## Sampling
+## 96GB for 100x10x90? 48GB is not enough
+## 48GB for 60x860
+## 24GB for 30x6x45

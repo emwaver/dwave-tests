@@ -1,0 +1,7 @@
+elwe_err/
+elwe_out/
+models/
+output/
+plots/
+compute/__pycache__/
+compute/cqm_c

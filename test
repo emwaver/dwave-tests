@@ -1,0 +1,5 @@
+#!/bin/bash
+
+echo "Hallo"
+sleep 1
+echo "Welt"
